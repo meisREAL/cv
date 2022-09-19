@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PersonalInformation from "./PersonalInformation";
 
 class Main extends Component {
     constructor(props) {
@@ -12,11 +13,17 @@ class Main extends Component {
 
         }
     }
+
+    handleSubmit(event) {
+        // place for code here xD
+    }
+
     render() {
         return (
-            <div className="main">
-                Place for CV components
-            </div>
+            <form>
+                <PersonalInformation />
+                <input type='button' value='Submit' />
+            </form>
         );
     }
 }
