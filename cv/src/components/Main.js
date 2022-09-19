@@ -11,7 +11,17 @@ class Main extends Component {
             email: '',
             phone: '',
 
-        }
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        const name = event.target.name;
+        const value = event.target.value
+        this.setState({
+            [name]: value
+        });
     }
 
     handleSubmit(event) {
@@ -19,9 +29,13 @@ class Main extends Component {
     }
 
     render() {
+        const { firstName, lastName, email, phone } = this.state
         return (
             <form>
-                <PersonalInformation />
+                <PersonalInformation firstName={firstName}
+                    lastName={lastName} email={email} phone={phone}
+                    handleInputChange={this.handleChange}
+                />
                 <input type='button' value='Submit' />
             </form>
         );
