@@ -14,6 +14,7 @@ class PersonalInformation extends Component {
         const { firstName, lastName, email, phone } = this.props;
         return (
             <div className="mainInputs">
+                <h2>Personal Information</h2>
                 <div className="inputs">
                     <label>First name</label>
                     <input type="text" name="firstName"

@@ -22,6 +22,7 @@ class Education extends Component {
         const { university, subject, studyFrom, studyTill } = this.props
         return (
             <div className="mainInputs" id="eduInputs">
+                <h2>Education</h2>
                 <div className="inputs">
                     <label>University name</label>
                     <input

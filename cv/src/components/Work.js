@@ -14,6 +14,7 @@ class Work extends Component {
         const { position, company, workedFrom, workedTill } = this.props
         return (
             <div className="mainInputs">
+                <h2>Work experience</h2>
                 <div className="inputs">
                     <label>Position</label>
                     <input
