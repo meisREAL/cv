@@ -11,41 +11,57 @@ class Education extends Component {
         this.props.handleInputChange(event);
     }
 
+    addEducationFields() {
+
+    }
+
     handleAddClick() {
-        //code fot button here
     }
 
     render() {
         const { university, subject, studyFrom, studyTill } = this.props
         return (
-            <div className="mainInputs">
+            <div className="mainInputs" id="eduInputs">
                 <div className="inputs">
                     <label>University name</label>
-                    <input type="text" name="university"
-                        value={university} onChange={this.handleInputChange}
+                    <input
+                        type="text"
+                        name="university"
+                        value={university}
+                        onChange={this.handleInputChange}
                     />
                 </div>
                 <div className="inputs">
                     <label>Subject</label>
-                    <input type="text" name="subject"
-                        value={subject} onChange={this.handleInputChange}
+                    <input
+                        type="text"
+                        name="subject"
+                        value={subject}
+                        onChange={this.handleInputChange}
                     />
                 </div>
                 <div className="inputs">
                     <label>From</label>
-                    <input type="email" name="studyFrom"
-                        value={studyFrom} onChange={this.handleInputChange}
+                    <input
+                        type="email"
+                        name="studyFrom"
+                        value={studyFrom}
+                        onChange={this.handleInputChange}
                     />
                 </div>
                 <div className="inputs">
-                    <label>Phone</label>
-                    <input type="text" name="studyTill"
-                        value={studyTill} onChange={this.handleInputChange}
+                    <label>Till</label>
+                    <input
+                        type="text"
+                        name="studyTill"
+                        value={studyTill}
+                        onChange={this.handleInputChange}
                     />
                 </div>
-                <div className="inputs">
-                    <input type="button" value="Add" />
-                </div>
+                {/* <div className="inputs">
+                    <input type="button" value="Add"
+                        onClick={this.handleAddClick} />
+                </div> */}
             </div>
         );
     }

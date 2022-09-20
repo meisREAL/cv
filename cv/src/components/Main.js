@@ -16,8 +16,11 @@ class Main extends Component {
             subject: '',
             studyFrom: '',
             studyTill: '',
-            education: [],
 
+            position: '',
+            company: '',
+            workedFrom: '',
+            workedTill: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -27,7 +30,7 @@ class Main extends Component {
         const name = event.target.name;
         const value = event.target.value
         this.setState({
-            [name]: value
+            [name]: value,
         });
     }
 
@@ -37,15 +40,21 @@ class Main extends Component {
 
     render() {
         const { firstName, lastName, email, phone, university,
-            subject, studyFrom, studyTill } = this.state
+            subject, studyFrom, studyTill, } = this.state
         return (
             <form>
-                <PersonalInformation firstName={firstName}
-                    lastName={lastName} email={email} phone={phone}
+                <PersonalInformation
+                    firstName={firstName}
+                    lastName={lastName}
+                    email={email}
+                    phone={phone}
                     handleInputChange={this.handleChange}
                 />
-                <Education university={university} subject={subject}
-                    studyFrom={studyFrom} studyTill={studyTill}
+                <Education
+                    university={university}
+                    subject={subject}
+                    studyFrom={studyFrom}
+                    studyTill={studyTill}
                     handleInputChange={this.handleChange} />
                 <input type='button' value='Submit' />
             </form>
