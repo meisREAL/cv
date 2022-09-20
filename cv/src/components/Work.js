@@ -27,15 +27,9 @@ class Work extends Component {
                     <label>Company</label>
                     <input
                         type="text"
-                        name="lastName"
+                        name="company"
                         value={company}
                         onChange={this.handleInputChange}
-                    />
-                </div>
-                <div className="inputs">
-                    <label>Email</label>
-                    <input type="email" name="email"
-                        value={email} onChange={this.handleInputChange}
                     />
                 </div>
                 <div className="inputs">
@@ -44,6 +38,15 @@ class Work extends Component {
                         type="text"
                         name="workedFrom"
                         value={workedFrom}
+                        onChange={this.handleInputChange}
+                    />
+                </div>
+                <div className="inputs">
+                    <label>Till</label>
+                    <input
+                        type="text"
+                        name="workedTill"
+                        value={workedTill}
                         onChange={this.handleInputChange}
                     />
                 </div>

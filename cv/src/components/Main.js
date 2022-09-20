@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PersonalInformation from "./PersonalInformation";
 import Education from "./Education";
+import Work from "./Work";
 
 class Main extends Component {
     constructor(props) {
@@ -40,7 +41,7 @@ class Main extends Component {
 
     render() {
         const { firstName, lastName, email, phone, university,
-            subject, studyFrom, studyTill, } = this.state
+            subject, studyFrom, studyTill, position, company, workedFrom, workedTill } = this.state
         return (
             <form>
                 <PersonalInformation
@@ -55,7 +56,15 @@ class Main extends Component {
                     subject={subject}
                     studyFrom={studyFrom}
                     studyTill={studyTill}
-                    handleInputChange={this.handleChange} />
+                    handleInputChange={this.handleChange}
+                />
+                <Work
+                    position={position}
+                    company={company}
+                    workedFrom={workedFrom}
+                    workedTill={workedTill}
+                    handleInputChange={this.handleChange}
+                />
                 <input type='button' value='Submit' />
             </form>
         );
